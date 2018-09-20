@@ -1,4 +1,93 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+.transport-tax-box {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.transport-tax-box-title {
+    background-color: #fff;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 3px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    min-height: 48px;
+    text-align: center;
+}
+
+.transport-tax-box-title h5 {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+}
+
+.transport-tax-box-content {
+    clear: both;
+    background-color: #fff;
+    color: inherit;
+    padding: 15px 0 20px 0;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+
+.transport-tax-box-content .notice,
+.transport-tax-box-description {
+    text-align: justify;
+}
+
+.transport-tax-box-content .input-group-addon,
+.transport-tax-box-content .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.transport-tax-box-content .input-group .form-control,
+.transport-tax-box-content .input-group-addon,
+.transport-tax-box-content .input-group-btn {
+    display: table-cell;
+}
+
+.transport-tax-box-content .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.transport-tax-box-content .input-group-addon {
+    background-color: #fff;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    font-weight: 400;
+    line-height: 1;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+.transport-tax-box-content .form-control, .single-line {
+    background: #fff none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 12px;
+    transition: border-color .15s ease-in-out 0s, box-shadow .15s ease-in-out 0s;
+    width: 100%;
+}
+
+.transport-tax-box-result {
+    margin-top: 5px;
+    padding: 6px 12px;
+}
+
+.transport-tax-box-result .badge {
+    font-weight: 600;
+}
