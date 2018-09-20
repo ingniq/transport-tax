@@ -113,6 +113,8 @@ class Transport_Tax {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_filter( 'mce_external_plugins', $plugin_admin, 'transport_tax_add_tinymce_script' );
+		$this->loader->add_filter( 'mce_buttons', $plugin_admin, 'transport_tax_register_mce_button' );
 		$this->loader->add_shortcode( 'trans_tax', $plugin_admin, 'transport_tax_shortcode' );
 
 	}

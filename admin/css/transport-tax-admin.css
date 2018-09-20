@@ -1,4 +1,4 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+i.mce-i-transport-tax-icon {
+    background: url("../images/tax.svg");
+    background-size: cover;
+}

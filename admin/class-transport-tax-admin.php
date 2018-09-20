@@ -283,12 +283,23 @@ class Transport_Tax_Admin {
             страховых компаниях.</p>
         </div>
       </div>
-
 		<?php
 		$output_string = ob_get_contents();
 		ob_end_clean();
 
 		return $output_string;
+	}
+
+	public function transport_tax_add_tinymce_script( $plugin_array ) {
+		$plugin_array['transport_tax_mce_button'] = plugin_dir_url( __FILE__ ) . 'js/transport-tax-button.js';
+
+		return $plugin_array;
+	}
+
+	public function transport_tax_register_mce_button( $buttons ) {
+		array_push( $buttons, 'transport_tax_mce_button' );
+
+		return $buttons;
 	}
 
 }
