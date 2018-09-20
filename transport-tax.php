@@ -7,8 +7,8 @@ Version: 1.0
 Author: Igor Filatov
 Author URI: https://github.com/ingniq
 Copyright: Igor Filatov
-Text Domain: ttax
-Domain Path: /lang
+Text Domain: transport-tax
+Domain Path: /languages
 */
 
 // If this file is called directly, abort.
