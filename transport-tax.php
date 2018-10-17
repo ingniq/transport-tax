@@ -3,7 +3,7 @@
 Plugin Name: Transport tax
 Plugin URI: https://github.com/ingniq/transport-tax
 Description: Calculate Transport tax
-Version: 1.0
+Version: 2.0
 Author: Igor Filatov
 Author URI: https://github.com/ingniq
 Copyright: Igor Filatov
@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'TRANSPORT_TAX_VERSION', '1.0.0' );
+define( 'TRANSPORT_TAX_VERSION', '2.0.0' );
 
 /**
  * The code that runs during plugin activation.

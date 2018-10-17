@@ -71,7 +71,7 @@ class Transport_Tax {
 		if ( defined( 'TRANSPORT_TAX_VERSION' ) ) {
 			$this->version = TRANSPORT_TAX_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '2.0.0';
 		}
 		$this->plugin_name = 'transport-tax';
 		$this->load_dependencies();
