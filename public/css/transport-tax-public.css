@@ -88,6 +88,14 @@
     padding: 6px 12px;
 }
 
+.transport-tax-box-result p span{
+    display: block;
+}
+
 .transport-tax-box-result .badge {
     font-weight: 600;
+}
+
+.hidden {
+    display: none !important;
 }
