@@ -11,6 +11,7 @@
  * @package    Transport_Tax
  * @subpackage Transport_Tax/includes
  */
+
 /**
  * The core plugin class.
  *
@@ -26,16 +27,26 @@ class Transport_Tax {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Transport_Tax_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Transport_Tax_Loader $loader Maintains and registers all hooks for the plugin.
 	 */
 
 	protected $loader;
+
+	/**
+	 * Description
+	 *
+	 * @since    1.0.0
+	 * @access   protected
+	 * @var      Transport_Tax_Data $data Description
+	 */
+
+	protected $data;
 	/**
 	 * The unique identifier of this plugin.
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @var      string $plugin_name The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
 	/**
@@ -43,9 +54,10 @@ class Transport_Tax {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $version    The current version of the plugin.
+	 * @var      string $version The current version of the plugin.
 	 */
 	protected $version;
+
 	/**
 	 * Define the core functionality of the plugin.
 	 *
@@ -66,6 +78,7 @@ class Transport_Tax {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 	}
+
 	/**
 	 * Load the required dependencies for this plugin.
 	 *
@@ -87,6 +100,11 @@ class Transport_Tax {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-transport-tax-loader.php';
 
 		/**
+		 * Description
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-transport-tax-data.php';
+
+		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-transport-tax-admin.php';
@@ -98,6 +116,7 @@ class Transport_Tax {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-transport-tax-public.php';
 
 		$this->loader = new Transport_Tax_Loader();
+		$this->data   = new Transport_Tax_Data();
 	}
 
 	/**
@@ -143,6 +162,7 @@ class Transport_Tax {
 	public function run() {
 		$this->loader->run();
 	}
+
 	/**
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
@@ -153,6 +173,7 @@ class Transport_Tax {
 	public function get_plugin_name() {
 		return $this->plugin_name;
 	}
+
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
@@ -162,6 +183,7 @@ class Transport_Tax {
 	public function get_loader() {
 		return $this->loader;
 	}
+
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
