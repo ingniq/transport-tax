@@ -151,7 +151,28 @@ class Transport_Tax {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'transport_tax_ajax' );
 
+		$this->loader->add_action( 'wp_ajax_get_zones', $plugin_public, 'get_zones' );
+		$this->loader->add_action( 'wp_ajax_nopriv_get_zones', $plugin_public, 'get_zones' );
+
+		$this->loader->add_action( 'wp_ajax_get_years', $plugin_public, 'get_years' );
+		$this->loader->add_action( 'wp_ajax_nopriv_get_years', $plugin_public, 'get_years' );
+
+		$this->loader->add_action( 'wp_ajax_get_categories', $plugin_public, 'get_categories' );
+		$this->loader->add_action( 'wp_ajax_nopriv_get_categories', $plugin_public, 'get_categories' );
+
+		$this->loader->add_action( 'wp_ajax_get_brands', $plugin_public, 'get_brands' );
+		$this->loader->add_action( 'wp_ajax_nopriv_get_brands', $plugin_public, 'get_brands' );
+
+		$this->loader->add_action( 'wp_ajax_get_models', $plugin_public, 'get_models' );
+		$this->loader->add_action( 'wp_ajax_nopriv_get_models', $plugin_public, 'get_models' );
+
+		$this->loader->add_action( 'wp_ajax_get_benefits', $plugin_public, 'get_benefits' );
+		$this->loader->add_action( 'wp_ajax_nopriv_get_benefits', $plugin_public, 'get_benefits' );
+
+		$this->loader->add_action( 'wp_ajax_calculate_tax', $plugin_public, 'calculate_tax' );
+		$this->loader->add_action( 'wp_ajax_nopriv_calculate_tax', $plugin_public, 'calculate_tax' );
 	}
 
 	/**
