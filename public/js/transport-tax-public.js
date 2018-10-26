@@ -182,16 +182,34 @@
 
     let data = {action: 'calculate_tax'};
 
-    if (zone !== "0") {data.zone = zone}
-    if (year) {data.year = year}
-    if (month) {data.month = month}
-    if (category) {data.category = category}
+    if (zone !== "0") {
+      data.zone = zone
+    }
+    if (year) {
+      data.year = year
+    }
+    if (month) {
+      data.month = month
+    }
+    if (category) {
+      data.category = category
+    }
 
-    if (benefit) {data.benefit = benefit}
-    if (power) {data.power = power}
-    if (brand) {data.brand = brand}
-    if (model) {data.model = model}
-    if (model_year) {data.model_year = model_year}
+    if (benefit) {
+      data.benefit = benefit
+    }
+    if (power) {
+      data.power = power
+    }
+    if (brand) {
+      data.brand = brand
+    }
+    if (model) {
+      data.model = model
+    }
+    if (model_year) {
+      data.model_year = model_year
+    }
 
     if (data.zone && data.year && data.category) {
 
@@ -204,7 +222,7 @@
           $("#warning").html("<p>Не указан год выпуска!</p>");
           return false;
         }
-        if (parseInt($("#nalog_year option:selected").text(), 10) <  data.model_year) {
+        if (parseInt($("#nalog_year option:selected").text(), 10) < data.model_year) {
           $("#warning").html("<p>Значение поля 'Год' не может быть меньше значения поля 'Год выпуска транспортного средства'!</p>");
           return false;
         }
@@ -221,15 +239,19 @@
           let html = "<p><strong><span>Расчет налога за " + resp.month + " мес. " + resp.year + " года:</span></strong>";
           html = html + "<span>Для транспортного средства: " + resp.category + "</span>";
           html = html + "<span>С мощностью двигателя: " + resp.power + "</span>";
-          html = html + "<strong><span>Ставка: " + resp.rate + "</span></strong>";
-          if (resp.benefit) {
-            html = html + "<span>Льгота: " + resp.benefit + "</span>";
+          if (resp.rate) {
+            html = html + "<strong><span>Ставка: " + resp.rate + "</span></strong>";
+            if (resp.benefit) {
+              html = html + "<span>Льгота: " + resp.benefit + "</span>";
+            }
+            if (resp.sub_benefit) {
+              html = html + "<span class='warning'>" + resp.sub_benefit + "</span>";
+            }
+            html = html + "<strong><span>Сумма налога составит: " + resp.cost + "</span></strong>";
+            html = html + "<span>Расчет произведен по формуле: " + resp.formula + "</span></p>";
+          } else {
+            html = html + "<span class='warning'>" + resp.info + "</span>";
           }
-          if (resp.sub_benefit) {
-            html = html + "<span class='warning'>" + resp.sub_benefit + "</span>";
-          }
-          html = html + "<strong><span>Сумма налога составит: " + resp.cost + "</span></strong>";
-          html = html + "<span>Расчет произведен по формуле: " + resp.formula + "</span></p>";
 
           $("#result").html(html);
         }

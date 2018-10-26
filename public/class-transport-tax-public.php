@@ -219,6 +219,7 @@ class Transport_Tax_Public {
 			'sub_benefit' => trim( $matchBenefit[2] ),
 			'cost'        => trim( $matchTaxCost[1] ),
 			'formula'     => trim( $matchFormula[1] ),
+			'info'        => trim( $textResult ),
 		];
 
 		wp_die( json_encode( $res ) );
