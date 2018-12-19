@@ -154,7 +154,7 @@ class Transport_Tax_Admin {
             <span class="input-group-addon">Модель транспортного средства</span>
             <select id="auto_model" class="form-control"></select>
           </div><!-- /input-group -->
-          <div class="input-group hidden">
+          <div class="input-group">
             <span class="input-group-addon">Год выпуска транспортного средства</span>
             <input id="model_year" type="number" class="form-control" placeholder="Год выпуска" >
           </div><!-- /input-group -->

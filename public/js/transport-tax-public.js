@@ -26,7 +26,7 @@
     $("#warning").html('');
     $("#auto_brand").html('').parent().addClass('hidden');
     $("#auto_model").html('').parent().addClass('hidden');
-    $("#model_year").val('').parent().addClass('hidden');
+    $("#model_year").val('');
     $("#benefit").html("<option value='0' selected>Нет</option>").parent().addClass('hidden');
 
     let zone = $("#reg option:selected").val();
@@ -55,7 +55,7 @@
     $("#warning").html('');
     $("#auto_brand").html('').parent().addClass('hidden');
     $("#auto_model").html('').parent().addClass('hidden');
-    $("#model_year").val('').parent().addClass('hidden');
+    $("#model_year").val('');
 
     let alias = $("#reg option:selected").val();
     let year = $("#nalog_year option:selected").val();
@@ -129,7 +129,7 @@
       else {
         $("#auto_brand").html('').parent().addClass('hidden');
         $("#auto_model").html('').parent().addClass('hidden');
-        $("#model_year").val('').parent().addClass('hidden');
+        $("#model_year").val('');
       }
     });
 
@@ -164,7 +164,6 @@
 
         $("#auto_model").html(html);
         $("#auto_model").parent().removeClass('hidden');
-        $("#model_year").parent().removeClass('hidden');
       }
     });
   });
